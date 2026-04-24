@@ -119,7 +119,7 @@ export function ProductsSection() {
 function CategoryRow({ category }: { category: ProductCategory }) {
   return (
     <div 
-      className="relative flex items-center justify-between overflow-hidden w-[49%] h-[120px] border-t-[0.8px] group transition-all duration-500 ease-in-out hover:h-[230px]"
+      className="relative flex items-center justify-between overflow-hidden w-[49%] h-[120px] border-t-[0.8px] group hover:h-[230px] transition-[height] duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-[height]"
       style={{ borderTopColor: 'rgb(206, 192, 183)' }}
     >
       <a
@@ -130,15 +130,15 @@ function CategoryRow({ category }: { category: ProductCategory }) {
       
       {/* Expanded Background Layer */}
       <div 
-        className="absolute inset-0 bg-center bg-cover opacity-0 group-hover:opacity-100 transition-all duration-700 scale-110 group-hover:scale-100"
+        className="absolute inset-0 bg-center bg-cover opacity-0 group-hover:opacity-100 transition-[opacity,transform] duration-700 ease-out scale-110 group-hover:scale-100 will-change-transform"
         style={{ backgroundImage: `url("${category.bgImg}")` }}
       >
         {/* Dark mask for text readability */}
-        <div className="absolute inset-0 bg-black/10" />
+        <div className="absolute inset-0 bg-black/20" />
       </div>
 
       {/* Standard Row Content (Visible by default, fades out on hover) */}
-      <div className="relative flex items-center justify-between w-full px-8 transition-opacity duration-300 group-hover:opacity-0">
+      <div className="relative flex items-center justify-between w-full px-8 transition-opacity duration-300 group-hover:opacity-0 pointer-events-none">
         {/* Thumbnail */}
         <div
           className="self-center flex justify-end w-24 h-16 sepia-[0.2] rounded-[0.625rem] bg-center bg-cover"
