@@ -83,12 +83,12 @@ export function RecipesSection() {
   const heroRef = useRef<HTMLDivElement>(null);
   const heroBgARef = useRef<HTMLDivElement>(null);
   const heroBgBRef = useRef<HTMLDivElement>(null);
+  const heroBgCRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<HTMLDivElement[]>([]);
   const ctaSectionRef = useRef<HTMLDivElement>(null);
   const ctaBgRef = useRef<HTMLDivElement>(null);
   const ctaVideoContainerRef = useRef<HTMLDivElement>(null);
   const ctaContentRef = useRef<HTMLDivElement>(null);
-  const currentTransitionRef = useRef(-1);
 
   cardRefs.current = [];
 
@@ -96,47 +96,36 @@ export function RecipesSection() {
     gsap.registerPlugin(ScrollTrigger);
 
     const section = sectionRef.current;
-    const bgA = heroBgARef.current;
-    const bgB = heroBgBRef.current;
+    const bgLayers = [heroBgARef.current, heroBgBRef.current, heroBgCRef.current];
 
-    if (!section || !bgA || !bgB) return;
+    if (!section || !bgLayers[0] || !bgLayers[1] || !bgLayers[2]) return;
 
-    bgA.style.backgroundImage = `url("${recipes[0].bgImg}")`;
-    bgB.style.backgroundImage = `url("${recipes[1]?.bgImg ?? recipes[0].bgImg}")`;
-    gsap.set(bgB, { opacity: 1, clipPath: 'inset(100% 0% 0% 0%)' });
+    // Initial state: Layer 0 visible, others clipped
+    gsap.set(bgLayers[1], { clipPath: 'inset(100% 0% 0% 0%)' });
+    gsap.set(bgLayers[2], { clipPath: 'inset(100% 0% 0% 0%)' });
 
     const ctx = gsap.context(() => {
-      for (let i = 0; i < cardRefs.current.length - 1; i += 1) {
-        const currentCard = cardRefs.current[i];
-        if (!currentCard) continue;
-
-        ScrollTrigger.create({
-          trigger: currentCard,
+      // Transition 1 -> 2
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: cardRefs.current[0],
           start: 'bottom center+=310',
           end: 'bottom center-=310',
           scrub: true,
-          onUpdate: (self) => {
-            if (currentTransitionRef.current !== i) {
-              bgA.style.backgroundImage = `url("${recipes[i].bgImg}")`;
-              bgB.style.backgroundImage = `url("${recipes[i + 1].bgImg}")`;
-              currentTransitionRef.current = i;
-            }
+        }
+      })
+      .to(bgLayers[1], { clipPath: 'inset(0% 0% 0% 0%)', ease: 'none' });
 
-            const revealTop = Math.max(0, (1 - self.progress) * 100);
-            gsap.set(bgB, { clipPath: `inset(${revealTop}% 0% 0% 0%)` });
-          },
-          onLeave: () => {
-            bgA.style.backgroundImage = `url("${recipes[i + 1].bgImg}")`;
-            gsap.set(bgB, { clipPath: 'inset(100% 0% 0% 0%)' });
-            currentTransitionRef.current = -1;
-          },
-          onLeaveBack: () => {
-            bgA.style.backgroundImage = `url("${recipes[i].bgImg}")`;
-            gsap.set(bgB, { clipPath: 'inset(100% 0% 0% 0%)' });
-            currentTransitionRef.current = -1;
-          },
-        });
-      }
+      // Transition 2 -> 3
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: cardRefs.current[1],
+          start: 'bottom center+=310',
+          end: 'bottom center-=310',
+          scrub: true,
+        }
+      })
+      .to(bgLayers[2], { clipPath: 'inset(0% 0% 0% 0%)', ease: 'none' });
 
       // CTA Zoom Animation
       const cta = ctaSectionRef.current;
@@ -233,7 +222,12 @@ export function RecipesSection() {
               <div
                 ref={heroBgBRef}
                 className="absolute inset-0 bg-center bg-cover sepia-[0.2]"
-                style={{ backgroundImage: `url("${recipes[0].bgImg}")` }}
+                style={{ backgroundImage: `url("${recipes[1].bgImg}")` }}
+              />
+              <div
+                ref={heroBgCRef}
+                className="absolute inset-0 bg-center bg-cover sepia-[0.2]"
+                style={{ backgroundImage: `url("${recipes[2].bgImg}")` }}
               />
             </div>
           </div>

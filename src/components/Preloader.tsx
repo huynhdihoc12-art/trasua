@@ -11,16 +11,31 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
   barsRef.current = [];
 
   useLayoutEffect(() => {
+    // 1. Image Preloading Logic
+    const imagesToPreload = [
+      '/assets/recipes/bg-matcha.jpg',
+      '/assets/recipes/bg-socola.jpg',
+      '/assets/recipes/bg-dau.jpg',
+      '/assets/recipes/recipe-matcha.png',
+      '/assets/recipes/recipe-socola.png',
+      '/assets/recipes/recipe-dau.png',
+    ];
+
+    imagesToPreload.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+
     const tl = gsap.timeline({
       onComplete: () => {
         onComplete();
       }
     });
 
-    // 1. Initial State
+    // 2. Initial State
     gsap.set(barsRef.current, { scaleY: 1 });
 
-    // 2. Progress Counter Animation
+    // 3. Progress Counter Animation
     const counterObj = { value: 0 };
     tl.to(counterObj, {
       value: 100,
