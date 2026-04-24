@@ -30,7 +30,7 @@ export function OrderCTA() {
         <div className="flex flex-col items-center justify-center gap-4 px-16 relative z-[1]">
           <img
             alt="round"
-            src="https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Fb6f7a82067beb20194118bcafadfe1e24ff49865.svg?generation=1776504523979800&alt=media"
+            src="/assets/cta/cta-icon.svg"
             className="block max-w-full w-8 mt-2"
           />
           <h3

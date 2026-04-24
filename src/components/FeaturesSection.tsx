@@ -14,8 +14,7 @@ const features: Feature[] = [
         Hương vị trà sữa <span className="text-[rgb(227,183,79)] whitespace-nowrap">Đài Loan truyền thống</span> ngay tại nhà bạn!
       </>
     ),
-    imgSrc:
-      'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F043a16171bf66103a5c9938324ca47b5c8070b7d.svg?generation=1776504522929359&alt=media',
+    imgSrc: '/assets/features/feature-1.svg',
     imageFirst: true,
   },
   {
@@ -24,8 +23,7 @@ const features: Feature[] = [
         Sản xuất từ nguồn <span className="text-[rgb(227,183,79)] whitespace-nowrap">nguyên liệu tươi sạch</span> và cao cấp nhất
       </>
     ),
-    imgSrc:
-      'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Fdc490ec09bc146cc727dc629fe02fe48e3417f32.svg?generation=1776504522847727&alt=media',
+    imgSrc: '/assets/features/feature-2.svg',
     imageFirst: true,
   },
   {
@@ -34,8 +32,7 @@ const features: Feature[] = [
         Tự tay <span className="text-[rgb(227,183,79)] whitespace-nowrap">sáng tạo hương vị</span> đồ uống của riêng bạn!
       </>
     ),
-    imgSrc:
-      'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F78a9a7b8595f3999d0653bb24575da97828e1f67.svg?generation=1776504522834593&alt=media',
+    imgSrc: '/assets/features/feature-3.svg',
     imageFirst: true,
   },
 ];

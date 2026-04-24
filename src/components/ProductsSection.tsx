@@ -12,38 +12,32 @@ const categories: ProductCategory[] = [
   {
     name: 'Các loại Bột',
     href: '#',
-    bgImg:
-      'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Fd6b092ee0b53bf89d911ab33cf6560c539576836.webp?generation=1776504523601235&alt=media',
+    bgImg: '/assets/products/prod-1.webp',
   },
   {
     name: 'Siro các loại',
     href: '#',
-    bgImg:
-      'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F7d7eaf1e4afccf04be1130b8977cff182061f2b8.webp?generation=1776504523593664&alt=media',
+    bgImg: '/assets/products/prod-2.webp',
   },
   {
     name: 'Topping & Thạch',
     href: '#',
-    bgImg:
-      'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Fcb5d353b8535da2a303d272c41a80aed63c90120.webp?generation=1776504523594416&alt=media',
+    bgImg: '/assets/products/prod-3.webp',
   },
   {
     name: 'Trà Lá & Cốt Trà',
     href: '#',
-    bgImg:
-      'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F7dcddbf0d978dba97fc7728d034de3270fe0810c.webp?generation=1776504523600286&alt=media',
+    bgImg: '/assets/products/prod-4.webp',
   },
   {
     name: 'Bao bì & Dụng cụ',
     href: '#',
-    bgImg:
-      'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F4439ac49e36f89dee5833a1eb9e0a20037260d5f.webp?generation=1776504523594137&alt=media',
+    bgImg: '/assets/products/prod-5.webp',
   },
   {
     name: 'Sản phẩm khác',
     href: '#',
-    bgImg:
-      'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F870104a80f6f22c9f6939163af4a1446d9b1a36f.webp?generation=1776504523633182&alt=media',
+    bgImg: '/assets/products/prod-6.webp',
   },
 ];
 

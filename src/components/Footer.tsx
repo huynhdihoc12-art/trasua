@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 const instagramPosts = [
   {
     href: 'https://www.instagram.com/p/CzbMXK4sMfz/',
-    img: 'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F92aec426fbbbd461282d392313c9c2a8becacfbc.png?generation=1776504523251698&alt=media',
+    img: '/assets/recipes/recipe-socola.png',
     rounded: 'rounded-full',
   },
   {
     href: 'https://www.instagram.com/p/C1hAksUvBnh/',
-    img: 'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F3181c533b47ddcf07fe744a01c61f69f553c6368.jpg?generation=1776504524173273&alt=media',
+    img: '/assets/footer/footer-inst-2.jpg',
     rounded: 'rounded-[1.875rem]',
   },
 ];
@@ -16,12 +16,12 @@ const instagramPosts = [
 const instagramPostsRight = [
   {
     href: 'https://www.instagram.com/p/CyUoFVihGmW/',
-    img: 'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F5ebfb73c630d7f47f68f38a980f02a2fac0f2c8c.png?generation=1776504524210516&alt=media',
+    img: '/assets/footer/footer-inst-3.png',
     rounded: 'rounded-[1.875rem]',
   },
   {
     href: 'https://www.instagram.com/p/C0cTD_4S96N/',
-    img: 'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F1a4be4ff38289b1a2c0dabd2c040f60c7659c173.jpg?generation=1776504524206932&alt=media',
+    img: '/assets/footer/footer-inst-4.jpg',
     rounded: 'rounded-full',
   },
 ];
@@ -29,22 +29,22 @@ const instagramPostsRight = [
 const socialLinks = [
   {
     href: 'https://www.facebook.com/profile.php',
-    icon: 'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F2b91e35c3b14a5492e45ca148edb1e7f3359191d.svg?generation=1776504524233909&alt=media',
+    icon: '/assets/footer/footer-fb.svg',
     label: 'Facebook',
   },
   {
     href: 'https://twitter.com/YColtd',
-    icon: 'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Ff0710c2f3e433c64f0a98bfa7e01054bffd05111.svg?generation=1776504524234177&alt=media',
+    icon: '/assets/footer/footer-ig.svg',
     label: 'Twitter',
   },
   {
     href: 'https://www.instagram.com/yenchuan_coltd',
-    icon: 'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F9de197bb06122f4d08f4ff725d32071110efcfba.svg?generation=1776504524411893&alt=media',
+    icon: '/assets/footer/footer-tt.svg',
     label: 'Instagram',
   },
   {
     href: 'https://www.linkedin.com/company/yenchuan/',
-    icon: 'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Ff80a189a8d6125cf477bcf18c647a90f04712d38.svg?generation=1776504524436012&alt=media',
+    icon: '/assets/footer/footer-yt.svg',
     label: 'LinkedIn',
   },
 ];
@@ -61,15 +61,15 @@ const pageLinks = [
 const marketplaceBadges = [
   {
     href: 'https://www.taiwantrade.com/suppliers/detail.html',
-    img: 'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F82ed757b5721c18884c9dd396fb0a2be9214b6af.gif?generation=1776504524213633&alt=media',
+    img: '/assets/footer/footer-partner-1.gif',
   },
   {
     href: 'https://www.eworldtrade.com/c/yenchuancompany/',
-    img: 'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F05571e1775a59bfe10826a46b42276cfe8df9435.png?generation=1776504524294898&alt=media',
+    img: '/assets/footer/footer-partner-2.png',
   },
   {
     href: 'https://yenchuan.en.alibaba.com/minisiteentrance.html',
-    img: 'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F73550711ecb3e1cd3bf0927aada39feb98318535.png?generation=1776504524203455&alt=media',
+    img: '/assets/footer/footer-partner-3.png',
     grayscale: true,
   },
 ];

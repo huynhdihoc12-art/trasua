@@ -59,7 +59,7 @@ export default function App() {
       {/* ─── Page body ─── */}
       <div className="flex flex-col max-w-full relative">
         {/* Hero (fixed background) */}
-        <HeroSection />
+        <HeroSection isReady={!loading} />
 
         {/* Spacer to push content below the fixed hero */}
         <div className="mt-[643px]" />
@@ -102,7 +102,7 @@ export default function App() {
           className="w-[60px] h-[60px] bg-[rgb(225,174,3)] text-white p-2 rounded-full flex items-center justify-center hover:opacity-90 transition-opacity"
         >
           <img
-            src="https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F6eb6c750b309b9c34ac61b64d858feddc1d35e22.svg?generation=1776504522855616&alt=media"
+            src="/assets/common/cookie-icon.svg"
             alt="Cookie"
           />
         </button>

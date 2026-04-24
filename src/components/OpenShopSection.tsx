@@ -113,8 +113,7 @@ export function OpenShopSection() {
         <div
           className="bg-card flex justify-end h-[257px] min-h-[480px] rounded-[1.25rem] bg-cover bg-center"
           style={{
-            backgroundImage:
-              'url("https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F4e3b6e8db88f8f46483480bd9c7d5b557292feb6.webp?generation=1776504523708070&alt=media")',
+            backgroundImage: 'url("/assets/openshop/openshop-bg.webp")',
           }}
         >
           <div

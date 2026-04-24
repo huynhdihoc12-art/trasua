@@ -1,10 +1,12 @@
 import React, { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 
-export function HeroSection() {
+export function HeroSection({ isReady }: { isReady: boolean }) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
+    if (!isReady) return;
+
     let handleMouseMove: (e: MouseEvent) => void;
 
     const ctx = gsap.context(() => {
@@ -13,8 +15,15 @@ export function HeroSection() {
         opacity: 0,
         y: 30,
         duration: 1.2,
-        delay: 2.8, // Wait for preloader to reveal
         ease: 'power3.out'
+      });
+
+      gsap.from('.hero-bubble', {
+        opacity: 0,
+        scale: 0,
+        duration: 1,
+        stagger: 0.05,
+        ease: 'back.out(1.7)'
       });
 
       handleMouseMove = (e: MouseEvent) => {
@@ -43,7 +52,7 @@ export function HeroSection() {
       window.removeEventListener('mousemove', handleMouseMove);
       ctx.revert();
     };
-  }, []);
+  }, [isReady]);
 
   return (
     <div ref={containerRef} className="flex items-center justify-center w-full overflow-hidden fixed left-0 top-0 right-0 h-[643px] bg-[rgb(250,248,246)]">
@@ -84,14 +93,16 @@ export function HeroSection() {
 
         {/* Logo video overlay - Transparent sharp container */}
         <div className="flex justify-center w-full">
-          <div className="w-[480px] h-[270px] rounded-xl overflow-hidden bg-transparent">
-            <iframe
-              src="https://player.vimeo.com/video/860765868?background=1&autoplay=1&loop=1&byline=0&title=0&transparent=1"
-              className="w-full h-full"
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowFullScreen
-            />
+          <div className="w-[480px] h-[180px] max-w-full rounded-[2.5rem] overflow-hidden bg-white shadow-[0_30px_60px_-12px_rgba(50,50,93,0.15),0_18px_36px_-18px_rgba(0,0,0,0.2)] border border-white ring-8 ring-[rgb(227,183,79)]/5">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-contain"
+            >
+              <source src="/assets/videos/hero-bg.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
       </div>

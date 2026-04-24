@@ -20,27 +20,22 @@ const recipes: Recipe[] = [
   {
     title: 'Sữa Tươi Matcha Sakura',
     href: '#',
-    drinkImg:
-      'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Fcf5e045dacabd2422a0881ccc7274ba58f14d4e2.png?generation=1776504523310108&alt=media',
-    bgImg:
-      'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Fe5234e53c89cdb19026a3fcf1fb524e461e9d75a.jpg?generation=1776504523275742&alt=media',
+    drinkImg: '/assets/recipes/recipe-matcha.png',
+    bgImg: '/assets/recipes/bg-matcha.jpg',
     products: [
       {
         href: '#',
-        imgSrc:
-          'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Fd1f08df90c7aeac004ca906bc477cf8ea2c26007.svg?generation=1776504523351917&alt=media',
+        imgSrc: '/assets/recipes/prod-matcha-1.svg',
         rounded: 'rounded-full',
       },
       {
         href: '#',
-        imgSrc:
-          'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Fe28a87dd7a26b21e73f96fdee90790a3d2433b75.svg?generation=1776504523232653&alt=media',
+        imgSrc: '/assets/recipes/prod-matcha-2.svg',
         rounded: 'rounded-[2.5rem]',
       },
       {
         href: '#',
-        imgSrc:
-          'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F27b08e85f71f6f7b7e652089ae922ccafc839629.svg?generation=1776504523335451&alt=media',
+        imgSrc: '/assets/recipes/prod-matcha-3.svg',
         rounded: 'rounded-full',
       },
     ],
@@ -48,21 +43,17 @@ const recipes: Recipe[] = [
   {
     title: 'Socola Trân Châu Đường Đen',
     href: '#',
-    drinkImg:
-      'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F92aec426fbbbd461282d392313c9c2a8becacfbc.png?generation=1776504523251698&alt=media',
-    bgImg:
-      'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F5e48c00036d073b06593abdddf6a8c6ecc59dbc8.jpg?generation=1776504523286655&alt=media',
+    drinkImg: '/assets/recipes/recipe-socola.png',
+    bgImg: '/assets/recipes/bg-socola.jpg',
     products: [
       {
         href: '#',
-        imgSrc:
-          'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Fbb8a526cd60897615e33142a5de0a2b8b93d0653.svg?generation=1776504523369172&alt=media',
+        imgSrc: '/assets/recipes/prod-socola-1.svg',
         rounded: 'rounded-full',
       },
       {
         href: '#',
-        imgSrc:
-          'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F742811aac7d30ad3082cf7fb27b18ba488d3f0aa.svg?generation=1776504523226999&alt=media',
+        imgSrc: '/assets/recipes/prod-socola-2.svg',
         rounded: 'rounded-[2.5rem]',
       },
     ],
@@ -70,21 +61,17 @@ const recipes: Recipe[] = [
   {
     title: 'Sữa Lắc Dâu Tây Barbie',
     href: '#',
-    drinkImg:
-      'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Fd8c3881a6ebf6b1bcc49c1194ea179769e048ba5.png?generation=1776504523531243&alt=media',
-    bgImg:
-      'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F85cd8b58d9ecb704ac47a48a85db662beb838e5a.jpg?generation=1776504523335651&alt=media',
+    drinkImg: '/assets/recipes/recipe-dau.png',
+    bgImg: '/assets/recipes/bg-dau.jpg',
     products: [
       {
         href: '#',
-        imgSrc:
-          'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F6ad9c421e298282001bca78f11e542527aa033d3.svg?generation=1776504523470005&alt=media',
+        imgSrc: '/assets/recipes/prod-dau-1.svg',
         rounded: 'rounded-full',
       },
       {
         href: '#',
-        imgSrc:
-          'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Fa41214e3cc8cbd1cd5b0670561ef39bf0d0c7826.svg?generation=1776504523507353&alt=media',
+        imgSrc: '/assets/recipes/prod-dau-2.svg',
         rounded: 'rounded-[2.5rem]',
       },
     ],
@@ -275,13 +262,15 @@ export function RecipesSection() {
             <div ref={ctaVideoContainerRef} className="absolute inset-0 transition-opacity">
               {/* Inner container with calculated dimensions to ensure 16:9 video ALWAYS covers screen */}
               <div className="absolute w-[max(100vw,177.78vh)] h-[max(100vh,56.25vw)] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                <iframe
-                  src="https://player.vimeo.com/video/890249630?background=1&autoplay=1&loop=1&byline=0&title=0&quality=1080p"
-                  className="w-full h-full pointer-events-none"
-                  frameBorder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowFullScreen
-                />
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover pointer-events-none"
+                >
+                  <source src="/assets/videos/recipes-bg.mp4" type="video/mp4" />
+                </video>
               </div>
             </div>
           </div>

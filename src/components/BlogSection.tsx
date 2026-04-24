@@ -14,56 +14,56 @@ const articles: Article[] = [
     category: 'Nguồn cung',
     title: 'Tất tần tật về Trân Châu: Cách nấu và lựa chọn loại tốt nhất',
     href: '#',
-    img: 'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F5b5b0b71a4ff8f99399d2bde192da1ff8e58e79d.png?generation=1776503023000000&alt=media',
+    img: '',
   },
   {
     id: 2,
     category: 'Nguồn cung',
     title: 'Gia công OEM hay Tự xây dựng thương hiệu? Mô hình nào phù hợp với bạn?',
     href: '#',
-    img: 'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F4b4b486b23b1204e39158eeafdf070535e00dafa.png?generation=1776504523857862&alt=media',
+    img: '/assets/blog/blog-2.png',
   },
   {
     id: 3,
     category: 'Nguồn cung',
     title: 'Danh mục nguyên liệu không thể thiếu để pha trà sữa truyền thống',
     href: '#',
-    img: 'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Feba4d80662a541ab74279c2ed70bcad6e0f68e84.png?generation=1776504523917713&alt=media',
+    img: '/assets/blog/blog-3.png',
   },
   {
     id: 4,
     category: 'Nguồn cung',
     title: 'Hướng dẫn chi tiết từ A-Z cách bắt đầu kinh doanh trà sữa (2026)',
     href: '#',
-    img: 'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Ff2762d1b04cb0b2d18e95349397f6f3e2db679f7.png?generation=1776504523965112&alt=media',
+    img: '/assets/blog/blog-4.png',
   },
   {
     id: 5,
     category: 'Xu hướng ngành',
     title: 'Trí tuệ nhân tạo (AI) trong nghiên cứu đồ uống: Tương lai của ngành pha chế',
     href: '#',
-    img: 'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F03d86389ae019d3dde639f5fe77ee70422cb5912.png?generation=1776504523953197&alt=media',
+    img: '/assets/blog/blog-5.png',
   },
   {
     id: 6,
     category: 'Kinh doanh',
     title: 'Xây dựng mối quan hệ hợp tác B2B bền vững trong ngành F&B',
     href: '#',
-    img: 'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Fb35bd927309911111ec3f77d34079787ec9f78d1.png?generation=1776504523943092&alt=media',
+    img: '/assets/blog/blog-6.png',
   },
   {
     id: 7,
     category: 'Kinh doanh',
     title: 'Cách tiếp nhận phản hồi từ khách hàng để đổi mới sản phẩm',
     href: '#',
-    img: 'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Fa6b87afdf3020d807d2e078cf59bea1bf942e673.png?generation=1776504523955616&alt=media',
+    img: '/assets/blog/blog-7.png',
   },
   {
     id: 8,
     category: 'Xu hướng ngành',
     title: '2026: Sự kết hợp giữa Hương vị và Chức năng trong ngành đồ uống',
     href: '#',
-    img: 'https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Fb0fe57d9fa8ee581890305cf2a186fc3175acf46.png?generation=1776504523944981&alt=media',
+    img: '/assets/blog/blog-8.png',
   },
 ];
 
@@ -115,7 +115,7 @@ export function BlogSection() {
             aria-label="Previous"
           >
             <svg width="20" height="14" viewBox="0 0 20 14" fill="none">
-              <path d="M13 1L19 7L13 13M1 7H19" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M13 1L19 7L13 13M1 7H19" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
           <button
@@ -125,7 +125,7 @@ export function BlogSection() {
             aria-label="Next"
           >
             <svg width="20" height="14" viewBox="0 0 20 14" fill="none">
-              <path d="M13 1L19 7L13 13M1 7H19" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M13 1L19 7L13 13M1 7H19" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
         </div>
